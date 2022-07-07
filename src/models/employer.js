@@ -1,10 +1,11 @@
-const Sequelize = require("sequelize");
-const db = require("../../app");
+/* const Sequelize = require("sequelize");
+const db = require('../config/db.config');
 const employee = require("./employee");
-const employerSchema = db.define(
+//console.log(db);
+const employer = db.define(
   "employer",
   {
-    employer_id: {
+    employerId: {
       type: Sequelize.INTEGER,
       autoIncrement: true,
       allowNull: false,
@@ -17,8 +18,8 @@ const employerSchema = db.define(
     },
   },
   { underscored: true }
-);
+); */
 
-employer.hasMany(employee, { foreignKey: "employee_id" });
+//employer.hasMany(employee, { foreignKey: "employeeId" });
 
-module.exports=Sequelize.Model('Employee',employerSchema);
+//module.exports=employer
